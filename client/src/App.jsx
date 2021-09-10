@@ -7,6 +7,7 @@ function App() {
   useEffect(() => {
     axios.get("/api").then((res) => {
       setText(res.data);
+      console.log("OK");
     });
   }, []);
   return (
