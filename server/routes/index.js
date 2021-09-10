@@ -7,7 +7,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/api", (req, res) => {
-  res.send("Helooooo!");
+  res.send("Hell!");
 });
 
 module.exports = router;
