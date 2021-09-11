@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const MONTH = new Date().getMonth() + 1;
+
 const Total = () => {
   const [total, setTotal] = useState({});
   const [month, setMonth] = useState(MONTH);

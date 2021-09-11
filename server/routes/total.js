@@ -24,10 +24,10 @@ router.get("/:month", async (req, res) => {
   ]).catch((e) => console.log(e));
 
   const data = {
-    all: result[0].rows[0].sum,
-    food: result[1].rows[0].sum,
-    daily: result[2].rows[0].sum,
-    traffic: result[3].rows[0].sum,
+    all: result[0].rows[0].sum || 0,
+    food: result[1].rows[0].sum || 0,
+    daily: result[2].rows[0].sum || 0,
+    traffic: result[3].rows[0].sum || 0,
   };
   res.send(data);
 });

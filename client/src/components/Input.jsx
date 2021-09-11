@@ -17,12 +17,12 @@ const Input = () => {
   const submitForm = (data) => {
     axios.put("/input", data).then((res) => {
       const { money, category, memo, date } = data;
-      if (res === "OK") {
+      if (res.data === "OK") {
         setMyData({ money: money, category: category, memo: memo, date: date });
         setIsRegist(true);
+        reset();
       }
     });
-    reset();
   };
 
   return (
