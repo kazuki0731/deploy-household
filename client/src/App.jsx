@@ -1,17 +1,18 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import Router from "./Routes/Router";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  main: {
+    textAlign: "center",
+  },
+});
 
 function App() {
-  const [text, setText] = useState("");
-  useEffect(() => {
-    axios.get("/api").then((res) => {
-      setText(res.data);
-      console.log("OK");
-    });
-  }, []);
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <p>{text}</p>
+    <div className={classes.main}>
+      <Router />
     </div>
   );
 }
