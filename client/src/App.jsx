@@ -4,6 +4,13 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles({
   main: {
     textAlign: "center",
+    "& ul": {
+      margin: 0,
+      "& li": {
+        listStyle: "none",
+        padding: 0,
+      },
+    },
   },
 });
 

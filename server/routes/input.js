@@ -7,6 +7,7 @@ router.put("/", async (req, res) => {
   const category = req.body.category;
   const memo = req.body.memo;
   const date = req.body.date;
+  console.log(date);
   await pool
     .query(
       "INSERT INTO consumptions (money, category, memo, date) VALUES ($1, $2, $3, $4)",

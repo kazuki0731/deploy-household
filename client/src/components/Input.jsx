@@ -43,14 +43,14 @@ const Input = () => {
         <br />
         {errors.money && errors.money.message}
         <div>
-          カテゴリー：
+          カテゴリ：
           <select {...register("category")}>
-            <option value="food">食費</option>
-            <option value="daily">日用品</option>
-            <option value="traffic">交通費</option>
+            <option value="食費">食費</option>
+            <option value="日用品">日用品</option>
+            <option value="交通費">交通費</option>
           </select>
         </div>
-        <input type="" placeholder="メモ" {...register("memo")} />
+        <input type="text" placeholder="メモ" {...register("memo")} />
         <br />
         <input
           type="date"
@@ -76,6 +76,7 @@ const Input = () => {
           <button onClick={() => setIsRegist(false)}>閉じる</button>
         </div>
       )}
+
       <Link to="/total">合計</Link>
       <br />
       <Link to="/">トップへ</Link>
