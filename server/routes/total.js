@@ -47,7 +47,7 @@ router.get("/detail/:month/:page", async (req, res) => {
 
   const result = await pool
     .query(
-      `${getData("*", month)} ORDER BY date ASC LIMIT ${limit} OFFSET ${offset}`
+      `${getData("*", month)} ORDER BY date DESC LIMIT ${limit} OFFSET ${offset}`
     )
     .catch((e) => console.log(e));
   res.send(result.rows);

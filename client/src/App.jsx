@@ -1,4 +1,4 @@
-import Router from "./Routes/Router";
+import Router from "./route/Router";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
